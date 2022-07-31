@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.extend-扩展实例构造器</title>
+</head>
+<body>
+    <h1>Vue.extend-扩展实例构造器</h1>
+    <official></official>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script type="application/javascript">
+    var official = Vue.extend({
+        template: "<p><a target='_blank' :href='url'>{{name}}</a> </p>",
+        data:function () {
+            return{
+                name: '前端烂笔头',
+                url: 'https://www.baidu.com'
+            }
+        }
+    });
+
+    new official().$mount('official');
+</script>
+</html>

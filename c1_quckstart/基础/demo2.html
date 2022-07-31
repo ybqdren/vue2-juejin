@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Demo</title>
+</head>
+<body>
+    <div id = 'app'>
+        <p v-if="isShow">我是ybqdren</p>
+        <p v-else>我是ybqdren2</p>
+
+        <p v-if="!isShow">我是ybqdren</p>
+        <p v-else>我是ybqdren2</p>
+
+        <!-- display: none -->
+        <p v-show="!isShow">我是消失的ybqdren</p>
+
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script>
+    window.onload = function (){
+        new Vue({
+            el: "#app",
+            data:{
+                isShow: true,
+            }
+        })
+    }
+</script>
+</html>

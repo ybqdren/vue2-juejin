@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Demo</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id = 'app'>
+        <h4>radio</h4>
+        <label for="apple">男</label>
+        <input type="radio" v-model="sex" value="男">
+        <label for="banana">女</label>
+        <input type="radio" v-model="sex" value="女">
+        </br>
+        {{sex}}
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script>
+    window.onload = function (){
+        new Vue({
+            el: '#app',
+            data: {
+                sex: '男'
+            }
+        })
+    }
+</script>
+</html>
